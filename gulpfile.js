@@ -101,10 +101,10 @@ gulp.task('sprite', function () {
 
 // Компиляция less. 
 gulp.task('less', function () {
-  return gulp.src('app/less/main.less')
+  return gulp.src('app/less/style.less')
   .pipe(less())
   .pipe(autoprefixer({
-    browsers: ['last 3 versions'],
+    browsers: ['last 5 versions'],
     cascade: false
   }))
     .pipe(minifyCss())
@@ -118,7 +118,7 @@ gulp.task('less', function () {
 // sprite отслеживает появление новой графики для переклеивания спрайта
 gulp.task('watch', function (){
   gulp.watch('app/less/**/*.less', ['less']);
-  gulp.watch('app/img/sprite/*.*', ['sprite']);
+  //gulp.watch('app/img/sprite/*.*', ['sprite']);
 });
 
 gulp.task('default', ['webserver', 'sprite', 'less', 'watch']);

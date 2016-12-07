@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto", Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+
+  @media (min-width: @mobile-min-width) {
+    overflow-x: hidden;
+  }
+}
+
+.container {
+  margin: 0 auto;
+}
+
+input, button, select, textarea{
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+// подсветка блоков
+* {
+  outline: 1px solid red;
+}

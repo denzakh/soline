@@ -1,0 +1,28 @@
+// десктопный вариант
+@media screen and (min-width: (@mobile-max-width + 1)) {
+  .container{
+    max-width: 1024px;
+    min-width: 920px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #ccf;  
+}
+
+  @import url(blocks/header.less);
+
+}
+
+// мобильный вариант
+@media screen and (max-width: @mobile-max-width) {
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 640px;
+    min-width: @mobile-min-width;
+    background-color: #ffc;
+  }
+
+  @import url(blocks/header-mobile.less);
+
+}
+
