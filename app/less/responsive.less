@@ -7,22 +7,95 @@
     padding-right: 30px;
 }
 
+  .only-mobile {
+    display: none;
+  }
+
   @import url(blocks/header.less);
 
 }
 
 // мобильный вариант
 @media screen and (max-width: @mobile-max-width) {
-  .container{
+
+  @import url(blocks/header-mobile.less);
+  @import url(blocks/nav-mobile.less);
+  @import url(blocks/main-mobile.less);
+  @import url(blocks/start-mobile.less);
+  @import url(blocks/alticle-mobile.less);
+  @import url(blocks/news-min-mobile.less);
+  @import url(blocks/feedback-mobile.less);
+  @import url(blocks/gallery-mobile.less);
+  @import url(blocks/footer-mobile.less);
+
+  .container {
     padding-left: 10px;
     padding-right: 10px;
     max-width: 640px;
     min-width: @mobile-min-width;
-    background-color: #ffc;
   }
 
-  @import url(blocks/header-mobile.less);
-  @import url(blocks/nav-mobile.less);
+  .only-desktop {
+    display: none;
+  }
 
+  h3, 
+  h4, 
+  strong {
+    color: @main-mobile;
+  }
+  
+  a {
+    color: @main-mobile-2;
+  }
+
+  a:hover {
+    opacity: 0.85;  
+  }
+
+  .btn {
+  display: inline-block;
+  color: @main-mobile-2;
+  font-weight: bold;
+  border: 1px solid @main-mobile-1;
+  padding: 5px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.02);
+  outline: none;
+  // min-width: 170px;
+  }
+
+  input, 
+  textarea {
+    display: inline-block;
+    border: 1px solid @main-mobile-1;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+    box-shadow: inset 1px 1px 2px 0 #ccc;
+  }
+
+  time {
+    display: inline-block;
+    font-size: 0.8em;
+    color: #ccc;
+    margin: 5px 0;
+  }
+
+  h3 {
+    margin-top: 1.5em;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
 

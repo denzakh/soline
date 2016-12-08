@@ -1,11 +1,17 @@
+.header__logo-box {
+  padding: 10px 0;
+}
 
-.header-logo {
-  text-align: center;  
+// логотип
+.header__logo {
+  text-align: center; 
+  padding: 10px; 
 }
 
 .header__logo-img {
   width: 30%;
   min-width: 102px;
+  max-width: 170px;
 }
 
 .header__logo-name {
@@ -16,15 +22,58 @@
   text-align: center;  
 }
 
+.header__call {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  padding: 10px;
+}
+
 .header__call-btn {
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .header__call-tel {
-  margin: 0 auto;
+  color: @main-mobile;
 }
 
 .header__navbar {
-  background-color: #D8D8D8;
+  background-color: #eee;
   padding: 10px 0;
+  text-align: center;
+}
+
+// поиск
+.header__search-box {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__search-box > * {
+  margin: 3px;
+}
+
+.header__search-title {
+  display: inline-block;
+}
+
+.header__search-input {
+  flex-grow: 5;
+}
+
+.header__search-btn {
+  flex-grow: 2;
+}
+
+
+.header__social-box {
+  padding: 10px;
+}
+
+.header__social {
+  display: inline-block;
+  padding: 5px;
 }
