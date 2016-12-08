@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Project for Soline</title>
+    <script>// Маркер работающего javascript
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
   </head>
-  <body>
+  <body class="no-js">
     <header class="header"> 
       <nav class="nav">
         <div class="container">
-          <div class="nav__logo-mobile">
-            <a href="" class="hidden">Warehous Solutions</a>
+          <div class="nav__mobile-topline">
+            <a href="" class="nav__mobile-logo">Warehous Solutions</a>
             <button class="nav__toggle-btn btn close" type="button"></button>
           </div>
           <ul class="nav__menu">
@@ -26,39 +32,41 @@
           </ul>
         </div>
       </nav>
-      <div class="header-logo">
+      <div class="header__logo-box">
         <div class="container">
-          <div class="header-logo__logo">
-            <a href="http://warehous-solutions.site" class="header-logo__siteurl">
-              <img src="img/logo.svg" alt="" class="header-logo__logo-img" width="102" height="56"> 
-              <img src="img/logo-name.svg" alt="Warehous Solutions" class="header-logo__logo-name" >
+          <div class="header__logo">
+            <a href="" class="header__siteurl">
+              <img src="img/logo.svg" alt="" class="header__logo-img" > 
+              <img src="img/logo-name.svg" alt="Warehous Solutions" class="header__logo-name" >
             </a>              
           </div>
-          <div class="header-logo__slogan">
+          <div class="header__slogan">
             Слоган нашей компании — лучший слоган в Петербурге!
           </div>
-          <div class="header-logo__call">
-            <button class="btn  header-logo__call-btn" type="button">Заказать звонок</button>
-            <div class="header-logo__call-tel">+7 (812) 123-45-67</div>
+          <div class="header__call">
+            <button class="btn  header__call-btn" type="button">Заказать звонок</button>
+            <div class="header__call-tel">+7 (812) 123-45-67</div>
           </div>
         </div>
       </div>
-      <div class="header-navbar">
+      <div class="header__navbar">
         <div class="container">
-          <div class="header-navbar__search-box">
-            <span class="hidden">Поиск по сайту</span>
-            <input type="search" class="header-navbar__search">
-            <button class="btn" type="button">
-              <span class="hidden">Искать</span>
-            </button>
+          <div class="header__search-box">
+            <form action="">
+              <span class="hidden">Поиск по сайту</span>
+              <input type="search" class="header__search-input">
+              <button class="btn header__search-btn" type="button" >
+                <span class="hidden">Искать</span>
+              </button>            
+            </form>
           </div>
-          <div class="header-navbar__social">
-            <span class="hidden">Мы в социальных сетях: </span>
-            <a href="" class="header-navbar__social header-navbar__social-vk">Vkontakte</a> 
-            <a href="" class="header-navbar__social header-navbar__social-fb">Facebook</a> 
-            <a href="" class="header-navbar__social header-navbar__social-tw">Twitter</a> 
-            <a href="" class="header-navbar__social header-navbar__social-ok">Одноклассники</a> 
-            <a href="" class="header-navbar__social header-navbar__social-in">Instagram</a> 
+          <div class="header__social">
+            <span class="header__social-mobile">Мы в социальных сетях: </span>
+            <a href="" class="header__social header__social-vk">Vkontakte</a> 
+            <a href="" class="header__social header__social-fb">Facebook</a> 
+            <a href="" class="header__social header__social-tw">Twitter</a> 
+            <a href="" class="header__social header__social-ok">Одноклассники</a> 
+            <a href="" class="header__social header__social-in">Instagram</a> 
           </div>
         </div>   
       </div>

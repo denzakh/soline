@@ -1,0 +1,105 @@
+<html>
+<head>
+	<!-- <script src="//code.jquery.com/jquery-1.12.4.min.js"></script> -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		body {
+			padding: 20px;
+			margin: 0;
+		}
+		.block {
+			width: 600px;
+			background: #eee;
+			padding: 50px;
+			box-sizing: border-box;
+			line-height: 1.3em;
+			font-size: 22px;
+			float: left;
+			margin-right: 20px;
+			height: 100%;
+		}
+		.row {
+			background: yellow;
+			padding: 5px 10px;
+			display: inline-block;
+			margin: 2px 0;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Исходный (1) блок -->
+	<div id="block1" class="block">
+		<div class="row">
+		Имеется информация, что на улицах нашего прекрасного города снова видели того-кого-нельзя-называть.    Вечнозеленый         кустарник прочно входит кандым, но особой популярностью пользуются заведения подобного рода, сосредоточенные в районе Центральной площади и железнодорожного вокзала. Основная магистраль проходит с севера на юг от Шкодера через Дуррес до Влёры, после поворота рельеф отталкивает музей Риддера Шмидта (XVIII в.), а также необходима справка о прививке против бешенства и результаты анализа на бешенство через 120 дней и за 30 дней до отъезда.
+		</div>  
+	</div>
+
+	<!-- Результирующий (2) блок -->
+	<div id="block2" class="block"></div>
+	
+	<script>
+		// Допишите сюда немного кода на javascript/jQuery, 
+		// чтобы перенести текст из блока 1 в блок 2, разбив текст на отдельные строки с соблюдением тех же переносов,
+		// как их автоматически делает браузер (в блоке 1).
+
+		let rowOriginBlock = document.querySelector("#block1 .row");
+		let rowOriginInner = rowOriginBlock.innerHTML;  
+
+		// заменяем пробельные последовательности на пробел
+		let rowPure = rowOriginInner.replace(/\s+/g, " " ); 
+		// вставляем пробелы после дефисов
+		rowPure = rowPure.replace(/-/g, "- " );
+		// создаем массив слов
+		let arrString = rowPure.split(" ");
+		arrString = arrString.filter(function(number) {  
+				return (number.length > 0);
+			});
+
+		// определяем селекторы
+		let block1 = document.querySelector("#block1");
+		let block2 = document.querySelector("#block2");
+		testDiv = document.createElement("div");
+		testDiv.classList.add("row");
+
+		testDiv.style.cssText="visibility: hidden;";
+		block1.appendChild(testDiv);
+
+		let arrStringNew = [];
+
+		// перебираем 
+		for (let i = 0; arrString.length > 0; i++) {
+			testDiv.innerHTML = "";
+			let y = 0;
+
+			// определяем количество слов в строке
+			for (; (rowOriginBlock.clientWidth > testDiv.clientWidth) && ((arrString.length - y) > -1); ++y) {
+					testDiv.innerHTML = testDiv.innerHTML + arrString[y] + " ";
+				}	
+
+			// вырезаем строки из массива, обрабатываем и добавляем в новый массив
+            let currentCut = arrString.splice(0, y-1);
+            currentCut = currentCut.join(" ");
+            currentCut = currentCut.replace(/- /g, "-" );
+			currentCut = `<div class="row">${currentCut}</div>`;
+			arrStringNew.push(currentCut);	
+			console.log(currentCut); 				
+		}
+
+		// записываем итоговый результат
+		block2.innerHTML = arrStringNew.join(" ");
+
+	</script>
+	
+	<!-- 
+		Вот, что должно получиться в блоке 2:
+		<div id="block2" class="block">
+			<div class="row">Имеется информация, что на улицах нашего</div>
+			<div class="row">прекрасного города снова видели того-кого-</div>
+			<div class="row">нельзя-называть. Вечнозеленый кустарник прочно</div>
+			...
+		</div>
+	-->
+	
+</body>
+</html>
