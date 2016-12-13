@@ -18,7 +18,7 @@
       <nav class="nav closed">
         <div class="container">
           <div class="nav__mobile-topline">
-            <a href="" class="nav__mobile-logo">Warehous Solutions</a>
+            <a href="" class="nav__mobile-logo only-mobile">Warehous Solutions</a>
             <button class="nav__toggle-btn btn close" type="button"></button>
           </div>
           <ul class="nav__menu">
@@ -34,39 +34,63 @@
       </nav>
       <div class="header__logo-box">
         <div class="container">
-          <div class="header__logo">
-            <a href="" class="header__siteurl">
-              <img src="img/logo.svg" alt="" class="header__logo-img" > 
-              <img src="img/logo-name.svg" alt="Warehous Solutions" class="header__logo-name" >
-            </a>              
-          </div>
-          <div class="header__slogan">
-            Слоган нашей компании — лучший слоган в Петербурге!
-          </div>
-          <div class="header__call">
-            <button class="btn  header__call-btn" type="button">Заказать звонок</button>
-            <div class="header__call-tel">+7 (812) 123-45-67</div>
+          <div class="header__logo-row row">
+            <div class="header__logo col-2">
+              <a href="" class="header__siteurl">
+                <img src="img/logo.svg" alt="" class="header__logo-img" > 
+                <img src="img/logo-name.svg" alt="Warehous Solutions" class="header__logo-name" >
+              </a>              
+            </div>
+            <div class="header__slogan col-2">
+              <span class="header__slogan-text">
+                Слоган нашей компании — <br>лучший слоган в Петербурге
+              </span>              
+            </div>
+            <div class="header__call  col-2">
+              <button class="btn  header__call-btn" type="button">Заказать звонок</button>
+              <div class="header__call-tel">+7 (812) 123-45-67</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="header__navbar">
-        <div class="container">
-          <form action="">
-            <div class="header__search-box">            
-              <span class="only-mobile  header__search-title">Поиск по сайту: </span>
-              <input type="search" class="header__search-input">
-              <button class="btn header__search-btn" type="button" >
-                <span class="only-mobile">Искать</span>
-              </button>            
-            </div>
-          </form>
-          <div class="header__social-box">
-            <span class="header__social-mobile">Мы в социальных сетях: </span>
-            <a href="" class="header__social header__social-vk"><span class="only-mobile">Vkontakte</span></a> 
-            <a href="" class="header__social header__social-fb"><span class="only-mobile">Facebook</span></a> 
-            <a href="" class="header__social header__social-tw"><span class="only-mobile">Twitter</span></a> 
-            <a href="" class="header__social header__social-ok"><span class="only-mobile">Одноклассники</span></a> 
-            <a href="" class="header__social header__social-in"><span class="only-mobile">Instagram</span></a> 
+        <div class="container">  
+          <div class="row">
+            <div class="header__search-box col-2 col-offset-2">
+              <form action="" >
+                <div class="header__search-box-inner">
+                  <span class="header__search-title">Поиск по сайту: </span>
+                  <input type="search" class="header__search-input">
+                  <button class="btn header__search-btn" type="button" >
+                    <span class="only-mobile">Искать</span>
+                    <i class="only-desktop icon-search"></i>
+                  </button>  
+                </div>                
+              </form>       
+            </div>          
+            <div class="header__social-box  col-2">
+              <span class="only-mobile header__social-mobile">Мы в социальных сетях: </span>
+              <a href="" class="header__social">
+                <span class="only-mobile">Vkontakte</span>
+                <i class="only-desktop icon-social-vk"></i>
+              </a> 
+              <a href="" class="header__social">
+                <span class="only-mobile">Facebook</span>
+                <i class="only-desktop  icon-social-fb"></i>
+              </a> 
+              <a href="" class="header__social">
+                <span class="only-mobile">Twitter</span>
+                <i class="only-desktop  icon-social-tw"></i>
+              </a> 
+              <a href="" class="header__social">
+                <span class="only-mobile">Одноклассники</span>
+                <i class="only-desktop  icon-social-ok"></i>
+              </a> 
+              <a href="" class="header__social">
+                <span class="only-mobile">Instagram</span>
+                <i class="only-desktop icon-social-in"></i>
+              </a> 
+            </div>            
           </div>
         </div>   
       </div>
@@ -196,7 +220,7 @@
           <h3 class="only-mobile">Контакты</h3>
           <div class="footer__logo only-desktop">
             <a href="http://warehous-solutions.site" class="footer__siteurl url">
-              <span class="hidden fn org">Warehous Solutions</span>          
+              <span class="only-mobile fn org">Warehous Solutions</span>          
               <img src="img/logo.svg" alt="" class="footer__logo-img" width="102" height="56"> 
               <img src="img/logo-name.svg" alt="Warehous Solutions" class="footer__logo-name" >
             </a>

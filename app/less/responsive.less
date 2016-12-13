@@ -1,8 +1,9 @@
 // десктопный вариант
 @media screen and (min-width: (@mobile-max-width + 1)) {
   .container{
-    max-width: 1024px;
-    min-width: 920px;
+    width: 1000px;
+    // max-width: 1024px;
+    // min-width: 920px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -10,13 +11,15 @@
   .only-mobile {
     display: none;
   }
-
+  @import url(grid.less);
   @import url(blocks/header.less);
 
 }
 
 // мобильный вариант
 @media screen and (max-width: @mobile-max-width) {
+
+  @import url(grid-mobile.less);
 
   @import url(blocks/header-mobile.less);
   @import url(blocks/nav-mobile.less);

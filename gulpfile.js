@@ -70,6 +70,7 @@ gulp.task('ftp', ['build'], function () {
     .pipe(ftp(ftpObj))
 });
 
+// запуск локального сервера
 // local server with livereload
 gulp.task('webserver', function() {
   gulp.src('app')
@@ -100,6 +101,7 @@ gulp.task('sprite', function () {
 });
 
 // Компиляция less. 
+// При ошибке в компиляции падает gulp, нужен перезапуск
 gulp.task('less', function () {
   return gulp.src('app/less/style.less')
   .pipe(less())
@@ -118,7 +120,7 @@ gulp.task('less', function () {
 // sprite отслеживает появление новой графики для переклеивания спрайта
 gulp.task('watch', function (){
   gulp.watch('app/less/**/*.less', ['less']);
-  //gulp.watch('app/img/sprite/*.*', ['sprite']);
+  gulp.watch('app/img/sprite/*.*', ['sprite']);
 });
 
 gulp.task('default', ['webserver', 'sprite', 'less', 'watch']);

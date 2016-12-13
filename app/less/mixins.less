@@ -3,3 +3,25 @@
 	border-bottom: 1px solid #eee;
 	padding-bottom: 15px;
 }
+
+// hidden
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// для иконок 
+.sprite-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.sprites(@spritesheet-sprites);
