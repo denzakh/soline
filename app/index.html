@@ -182,39 +182,47 @@
         </div>
       </div>
       <div class="main__content-wrapper-2">
-        <div class="container  main__container-reverse">
-          <section class="feedback">
-            <form action="" id="feedback" name="feedback">
-              <h3 class="feedback__title">
-                Задать вопрос
-              </h3>
-              <div class="feedback__subtitle">
-                Наши сотрудники проведут профессиональную консультацию
+        <div class="container">
+          <div class="main__container-reverse row">
+            <section class="feedback col-3">
+              <form action="" id="feedback" name="feedback">
+                <h3 class="feedback__title">
+                  Задать вопрос
+                </h3>
+                <div class="feedback__subtitle">
+                  Наши сотрудники проведут профессиональную консультацию
+                </div>
+                <div class="feedback__inputs row">
+                  <label for="feedback__name" class="feedback__label col-3">
+                  <span class="only-mobile">Имя: </span>
+                  <input type="text" class="feedback__input" id="feedback__name" placeholder="Имя">
+                  </label>
+                  <label for="feedback__tel" class="feedback__label col-3">
+                  <span class="only-mobile">Телефон: </span>
+                  <input type="tel" class="feedback__input " id="feedback__tel" placeholder="Телефон">
+                  </label>
+                  
+                </div>
+                <textarea name="feedback__text" id="" cols="20" rows="6" class="feedback__text"></textarea>
+                <button class="btn  feedback__btn" type="submit">Задать вопрос</button>
+              </form>
+            </section>
+            <section class="gallery col-3">
+              <h3 class="only-mobile">Фотографии</h3>
+              <div class="gallery__images row">
+                <div class="gallery__imagebox col-2">
+                  <a href=""><img src="img/gallery-101.jpg" alt="" class="gallery__img"></a>
+                </div>
+                <div class="gallery__imagebox col-2">
+                  <a href=""><img src="img/gallery-102.jpg" alt="" class="gallery__img"></a>
+                </div>
+                <div class="gallery__imagebox col-2">
+                  <a href=""><img src="img/gallery-103.jpg" alt="" class="gallery__img"></a>
+                </div>
+                <div class="gallery__imagebox gallery__imagebox--link col-2"><a href="">Все&nbsp;фотографии</a></div>
               </div>
-              <div class="feedback__inputs">
-                <label for="feedback__name" class="feedback__label">
-                <span class="only-mobile">Имя: </span>
-                <input type="text" class="feedback__input" id="feedback__name" placeholder="Имя">
-                </label>
-                <label for="feedback__tel" class="feedback__label">
-                <span class="only-mobile">Телефон: </span>
-                <input type="tel" class="feedback__input" id="feedback__tel" placeholder="Телефон">
-                </label>
-                
-              </div>
-              <textarea name="feedback__text" id="" cols="20" rows="6" class="feedback__text"></textarea>
-              <button class="btn  feedback__btn" type="submit">Задать вопрос</button>
-            </form>
-          </section>
-          <section class="gallery">
-            <h3 class="only-mobile">Фотографии</h3>
-            <div class="gallery__images">
-              <div class="gallery__imagebox"><a href=""><img src="img/gallery-101.jpg" alt="" class="gallery__img"></a></div>
-              <div class="gallery__imagebox"><a href=""><img src="img/gallery-102.jpg" alt="" class="gallery__img"></a></div>
-              <div class="gallery__imagebox"><a href=""><img src="img/gallery-103.jpg" alt="" class="gallery__img"></a></div>
-              <div class="gallery__imagebox  gallery__imagebox--link"><a href="">Все фотографии</a></div>
-            </div>
-          </section>     
+            </section>  
+          </div>
         </div>
       </div>
       <div class="main__content-wrapper-3">
